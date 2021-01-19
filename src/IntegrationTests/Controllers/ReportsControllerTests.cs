@@ -21,5 +21,6 @@ namespace IntegrationTests.Controllers
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
             Assert.AreEqual(1, responseModel.Count());
         }
+        // Rest of the tests...
     }
 }
