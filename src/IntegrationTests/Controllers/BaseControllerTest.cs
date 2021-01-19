@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 namespace IntegrationTests.Controllers
 {
-    public abstract class BaseTest
+    public abstract class BaseControllerTest
     {
         protected HttpClient Client;
         private CustomWebApplicationFactory<Startup> _factory;
