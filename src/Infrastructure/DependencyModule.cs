@@ -1,4 +1,4 @@
-﻿using Application.Contracts;
+﻿using Application.Common.Contracts;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -10,12 +10,10 @@ namespace Infrastructure
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-
             services.AddDbContext<SalesDbContext>(options =>
                 options.UseSqlServer(
                     configuration.GetConnectionString("DefaultConnection"),
                     b => b.MigrationsAssembly(typeof(SalesDbContext).Assembly.FullName)));
-
 
             services.AddScoped<ISalesDbContext>(provider => provider.GetService<SalesDbContext>());
 
