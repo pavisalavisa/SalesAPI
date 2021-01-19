@@ -45,6 +45,7 @@ namespace IntegrationTests.Utilities
             var logger = scopedServices
                 .GetRequiredService<ILogger<CustomWebApplicationFactory<TStartup>>>();
 
+            db.Database.EnsureDeleted();
             db.Database.EnsureCreated();
 
             try
