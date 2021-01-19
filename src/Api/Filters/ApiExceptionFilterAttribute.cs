@@ -4,6 +4,7 @@ using Application.Common.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+#pragma warning disable 1591
 
 namespace Api.Filters
 {

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+#pragma warning disable 1591
 
 namespace Api.Controllers
 {

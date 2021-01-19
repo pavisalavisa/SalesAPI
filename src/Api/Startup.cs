@@ -1,3 +1,6 @@
+using System;
+using System.IO;
+using System.Reflection;
 using Api.Filters;
 using Application;
 using Common;
@@ -9,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Infrastructure;
+#pragma warning disable 1591
 
 namespace Api
 {
@@ -39,8 +43,19 @@ namespace Api
                     {
                         Title = "Sales Api",
                         Version = "v1",
-                        Description = "Simple sales service made with .NET 5"
+                        Description = "Simple sales service made with .NET 5",
+                        Contact = new OpenApiContact
+                        {
+                            Name = "Antonio Kristièeviæ (pavisalavisa)",
+                            Email = string.Empty,
+                            Url = new Uri("https://medium.com/@kristicevic.antonio"),
+                        },
+
                     });
+
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
         }
 
