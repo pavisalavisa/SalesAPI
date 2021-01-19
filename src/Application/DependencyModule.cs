@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Application.Sales.Commands.CreateSale;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Application
 {
@@ -6,7 +7,7 @@ namespace Application
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            //services.AddScoped<ICommand>(provider => provider.GetService<Command>());
+            services.AddScoped<ICreateSaleCommand, CreateSaleCommand>();
 
             return services;
         }

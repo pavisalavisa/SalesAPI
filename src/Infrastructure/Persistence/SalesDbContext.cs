@@ -1,16 +1,19 @@
 ﻿using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
-using Application.Contracts;
+using Application.Common.Contracts;
+using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Persistence
 {
     public class SalesDbContext : DbContext, ISalesDbContext
     {
-        public SalesDbContext(DbContextOptions options) : base(options)
+        public SalesDbContext(DbContextOptions<SalesDbContext> options) : base(options)
         {
         }
+
+        public DbSet<Sale> Sales { get; set; }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {

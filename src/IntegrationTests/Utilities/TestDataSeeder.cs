@@ -17,13 +17,13 @@ namespace IntegrationTests.Utilities
         private static void SeedSales(SalesDbContext context)
         {
             context.Sales.AddRange(
-                new Sale { ArticleNumber = "0000001", Currency = Currency.Euro, DateTime = DateTime.UtcNow, Price = 10m },
-                new Sale { ArticleNumber = "0000001", Currency = Currency.Euro, DateTime = DateTime.UtcNow, Price = 10m },
-                new Sale { ArticleNumber = "0000001", Currency = Currency.Euro, DateTime = DateTime.UtcNow, Price = 10m },
-                new Sale { ArticleNumber = "0000002", Currency = Currency.Euro, DateTime = DateTime.UtcNow, Price = 10m },
-                new Sale { ArticleNumber = "0000002", Currency = Currency.Euro, DateTime = DateTime.UtcNow, Price = 10m },
-                new Sale { ArticleNumber = "0000002", Currency = Currency.Euro, DateTime = DateTime.UtcNow, Price = 10m },
-                new Sale { ArticleNumber = "0000003", Currency = Currency.Euro, DateTime = DateTime.UtcNow, Price = 10m });
+                new Sale { ArticleNumber = "0000001", Currency = Currency.Euro, DateTimeUtc = DateTime.UtcNow, Price = 10m },
+                new Sale { ArticleNumber = "0000001", Currency = Currency.Euro, DateTimeUtc = DateTime.UtcNow, Price = 10m },
+                new Sale { ArticleNumber = "0000001", Currency = Currency.Euro, DateTimeUtc = DateTime.UtcNow, Price = 10m },
+                new Sale { ArticleNumber = "0000002", Currency = Currency.Euro, DateTimeUtc = DateTime.UtcNow, Price = 10m },
+                new Sale { ArticleNumber = "0000002", Currency = Currency.Euro, DateTimeUtc = DateTime.UtcNow, Price = 10m },
+                new Sale { ArticleNumber = "0000002", Currency = Currency.Euro, DateTimeUtc = DateTime.UtcNow, Price = 10m },
+                new Sale { ArticleNumber = "0000003", Currency = Currency.Euro, DateTimeUtc = DateTime.UtcNow, Price = 10m });
         }
     }
 }
