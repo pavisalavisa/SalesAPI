@@ -13,7 +13,8 @@ namespace Application.Sales.Commands.CreateSale
             {
                  RuleFor(x => x.ArticleNumber)
                     .NotEmpty().WithMessage("Article number should not be empty.")
-                    .MaximumLength(32);
+                    .MaximumLength(32)
+                    .Matches(@"^[0-9a-zA-Z]+$").WithMessage("Article number must contain only alphanumeric characters.");
 
                 // Should the price ever be negative?
                 // This is something that PO would usually answer
