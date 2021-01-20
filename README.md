@@ -1,5 +1,7 @@
 # Sales API
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/pavisalavisa/SalesAPI/.NET?label=Main%20Build)
+
 Sales API is a toy example built with .NET 5 employing clean architecture.
 
 # Objectives
